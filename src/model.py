@@ -52,7 +52,7 @@ class Learner(object):
     def _random_uniform_unit(self, r, c):
         bound = 6./ np.sqrt(c)
         init_matrix = np.random.uniform(-bound, bound, (r, c))
-        init_matrix = np.array(map(lambda row: row / np.linalg.norm(row), init_matrix))
+        init_matrix = np.array(list(map(lambda row: row / np.linalg.norm(row), init_matrix)))
         return init_matrix
 
 
